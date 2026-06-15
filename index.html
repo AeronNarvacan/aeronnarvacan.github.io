@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Aeron Paulo Narvacan — Student Developer</title>
+  <link rel="icon" type="image/png" href="assets/images/logo-white.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <script>
+    (function () {
+      var saved = localStorage.getItem('theme');
+      if (saved === 'dark') {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    })();
+  </script>
+</head>
+
+<body>
+
+  <div class="container" style="max-width: 1100px;">
+
+    <div class="site-nav-wrapper d-flex justify-content-center">
+      <nav class="site-nav rounded-pill" aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#stack">Stack</a>
+        <a href="#projects">Projects</a>
+      </nav>
+    </div>
+
+    <div class="card mb-4 hero-card-relative">
+      <div class="card-body hero-card-body d-flex align-items-center flex-wrap">
+
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+          <i class="bi bi-sun toggle-icon-sun" aria-hidden="true"></i>
+          <i class="bi bi-moon toggle-icon-moon" aria-hidden="true"></i>
+        </button>
+
+        <img src="assets/images/profile.jpg" alt="Aeron Paulo Narvacan" class="hero-profile-img">
+
+        <div class="hero-info flex-grow-1">
+          <h1 class="hero-name">Aeron Paulo Narvacan</h1>
+          <p class="hero-location">
+            <i class="bi bi-geo-alt me-1"></i>Tanauan City, Batangas, Philippines
+          </p>
+          <span class="role-badge">Student Developer</span>
+          <div class="social-icons">
+            <a href="https://github.com/AeronNarvacan" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i
+                class="bi bi-github"></i></a>
+            <a href="https://www.instagram.com/aeron.nrvcn?igsh=MWRndGQ5Y2NzenZwcg==" target="_blank"
+              rel="noopener noreferrer" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="https://www.facebook.com/share/1D76tM2Syh/" target="_blank" rel="noopener noreferrer"
+              aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="mailto:aeron.p.narvacan@gmail.com" aria-label="Email"><i class="bi bi-envelope"></i></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <section id="about">
+      <div class="row g-4 mb-4">
+
+        <div class="col-lg-8">
+          <div class="card h-100">
+            <div class="card-body about-edu-card-body">
+              <h2 class="card-section-title">About</h2>
+              <div class="about-text">
+                <p>
+                  I'm a second-year Bachelor of Science in Information Technology student at the
+                  Polytechnic University of the Philippines – Sto. Tomas Campus, with a strong
+                  interest in backend development and building practical software solutions. My
+                  primary focus is developing web applications using PHP, MySQL, JavaScript, and
+                  modern frontend technologies while continuously expanding my knowledge of
+                  software engineering and system design.
+                </p>
+                <p>
+                  Through both academic and personal projects, I have gained hands-on experience
+                  developing complete web applications, strengthening my skills in backend
+                  development, database design, user interface implementation, and
+                  problem-solving.
+                </p>
+                <p>
+                  I am particularly interested in building systems that improve organization,
+                  streamline processes, and solve real-world problems. As I continue my studies, I
+                  remain committed to refining my technical skills, exploring new technologies, and
+                  growing as a software developer.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4">
+          <div class="card h-100">
+            <div class="card-body about-edu-card-body">
+              <h2 class="card-section-title">Education</h2>
+
+              <div class="edu-entry">
+                <p class="edu-degree">BS Information Technology</p>
+                <p class="edu-institution">Polytechnic University of the Philippines</p>
+                <p class="edu-year">Present</p>
+              </div>
+
+              <hr class="my-3 opacity-25">
+
+              <div class="edu-entry">
+                <p class="edu-degree">Science, Technology, Engineering, and Mathematics (STEM)</p>
+                <p class="edu-institution">Nova Schola Tanauan</p>
+                <p class="edu-year">2024</p>
+              </div>
+
+              <hr class="my-3 opacity-25">
+
+              <div class="edu-entry">
+                <p class="edu-degree">Primary School</p>
+                <p class="edu-institution">Sta. Cecilia Integrated School</p>
+                <p class="edu-year">2017</p>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="stack">
+      <div class="row g-4 mb-4">
+
+        <div class="col-lg-9">
+          <div class="card h-100">
+            <div class="card-body section-card-body">
+              <h2 class="card-section-title">Tech Stack</h2>
+
+              <p class="chip-category-label">Frontend</p>
+              <div class="d-flex flex-wrap gap-2 mb-2">
+                <span class="chip">HTML</span>
+                <span class="chip">CSS</span>
+                <span class="chip">JavaScript</span>
+                <span class="chip">Bootstrap</span>
+                <span class="chip">Tailwind CSS</span>
+                <span class="chip">Figma</span>
+              </div>
+
+              <p class="chip-category-label">Backend</p>
+              <div class="d-flex flex-wrap gap-2 mb-2">
+                <span class="chip">PHP</span>
+                <span class="chip">MySQL</span>
+                <span class="chip">MariaDB</span>
+                <span class="chip">Python</span>
+                <span class="chip">C#</span>
+              </div>
+
+              <p class="chip-category-label">Developer Tools</p>
+              <div class="d-flex flex-wrap gap-2">
+                <span class="chip">Git</span>
+                <span class="chip">Github</span>
+                <span class="chip">Vs Code</span>
+                <span class="chip">XAMPP</span>
+                <span class="chip">Visual Studio</span>
+                <span class="chip">Arduino IDE</span>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3">
+          <div class="branding-flip-scene" role="button" tabindex="0" aria-label="Flip branding card" id="brandingCard">
+            <div class="branding-flip-card">
+              <div class="branding-flip-front">
+                <img src="assets/images/branding-card.png" alt="Aeron Narvacan — GALAHAD branding card front"
+                  class="branding-card-img">
+              </div>
+              <div class="branding-flip-back">
+                <img src="assets/images/branding-card-back.png" alt="Aeron Narvacan — GALAHAD branding card back"
+                  class="branding-card-img">
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="projects" class="mb-5">
+      <div class="card">
+        <div class="card-body section-card-body">
+          <h2 class="projects-section-title">Projects</h2>
+
+          <div class="row g-4">
+
+            <div class="col-md-6">
+              <div class="card">
+                <img src="assets/images/todana2.png" alt="TODANA2 project screenshot" class="project-card-img">
+                <div class="card-body p-3">
+                  <h3 class="project-title">TODANA2</h3>
+                  <p class="project-description">
+                    A queue management system designed to reduce waiting times and improve queue
+                    operations at tricycle terminals.
+                  </p>
+                  <div class="d-flex flex-wrap gap-2">
+                    <span class="chip">HTML</span>
+                    <span class="chip">CSS</span>
+                    <span class="chip">JS</span>
+                    <span class="chip">Bootstrap</span>
+                    <span class="chip">PHP</span>
+                    <span class="chip">SQL</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="card">
+                <img src="assets/images/dz.png" alt="DeadZone Survival project screenshot" class="project-card-img">
+                <div class="card-body p-3">
+                  <h3 class="project-title">DeadZone Survival</h3>
+                  <p class="project-description">
+                    A Top-Down Survival Game. Players navigate a hostile environment and survive against various threats
+                  </p>
+                  <div class="d-flex flex-wrap gap-2">
+                    <span class="chip">Python</span>
+                    <span class="chip">Pygame</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="card">
+                <img src="assets/images/vault93.png" alt="Vault93 project screenshot" class="project-card-img">
+                <div class="card-body p-3">
+                  <h3 class="project-title">Vault93</h3>
+                  <p class="project-description">
+                    An e-commerce platform concept focused on collectible toys. The project explores product catalog
+                    management,
+                    within a niche collector-focused marketplace.
+                  </p>
+                  <div class="d-flex flex-wrap gap-2">
+                    <span class="chip">HTML</span>
+                    <span class="chip">CSS</span>
+                    <span class="chip">JS</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="card">
+                <img src="assets/images/fitsync.png" alt="FitSync project screenshot" class="project-card-img">
+                <div class="card-body p-3">
+                  <h3 class="project-title">FitSync</h3>
+                  <p class="project-description">
+                    A web-based gym management platform
+                    designed to improve gym operations through
+                    administrative and member-facing tools for
+                    membership and activity management.
+                  </p>
+                  <div class="d-flex flex-wrap gap-2">
+                    <span class="chip">HTML</span>
+                    <span class="chip">CSS</span>
+                    <span class="chip">JS</span>
+                    <span class="chip">Bootstrap</span>
+                    <span class="chip">PHP</span>
+                    <span class="chip">SQL</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="card">
+                <img src="assets/images/money_map.png" alt="Money Map project screenshot" class="project-card-img">
+                <div class="card-body p-3">
+                  <h3 class="project-title">Money Map</h3>
+                  <p class="project-description">
+                    A personal finance management application
+                    built to monitor spending habits, track
+                    expenses, and provide a clearer overview of
+                    financial activity.
+                  </p>
+                  <div class="d-flex flex-wrap gap-2">
+                    <span class="chip">HTML</span>
+                    <span class="chip">JS</span>
+                    <span class="chip">Tailwind CSS</span>
+                    <span class="chip">PHP</span>
+                    <span class="chip">SQL</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="card">
+                <img src="assets/images/travel_buddy.png" alt="Travel Buddy project screenshot"
+                  class="project-card-img">
+                <div class="card-body p-3">
+                  <h3 class="project-title">Travel Buddy</h3>
+                  <p class="project-description">
+                    A travel planning application that combines
+                    trip organization with a digital memory
+                    capsule, allowing users to preserve travel
+                    experiences through photos and trip records.
+                  </p>
+                  <div class="d-flex flex-wrap gap-2">
+                    <span class="chip">HTML</span>
+                    <span class="chip">JS</span>
+                    <span class="chip">Tailwind CSS</span>
+                    <span class="chip">PHP</span>
+                    <span class="chip">SQL</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+
+  <script src="assets/js/script.js"></script>
+
+</body>
+
+</html>
