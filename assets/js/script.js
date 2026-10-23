@@ -1,46 +1,117 @@
-document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
-  anchor.addEventListener('click', function (e) {
-    var target = document.querySelector(this.getAttribute('href'));
-    if (target) {
-      e.preventDefault();
-      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-  });
-});
-
-
 (function () {
-  var sections = document.querySelectorAll('section[id]');
-  var navLinks = document.querySelectorAll('.site-nav a[href^="#"]');
+  var sections = Array.from(document.querySelectorAll('section[id]'));
+  var navLinks = Array.from(document.querySelectorAll('.site-nav a[href^="#"]'));
 
   if (!sections.length || !navLinks.length) return;
 
+  var isClickScrolling = false;
+  var clickTimeout = null;
+
   function setActive(id) {
     navLinks.forEach(function (link) {
-      link.classList.remove('active');
       if (link.getAttribute('href') === '#' + id) {
         link.classList.add('active');
+      } else {
+        link.classList.remove('active');
       }
     });
   }
 
-  var observer = new IntersectionObserver(
-    function (entries) {
-      entries.forEach(function (entry) {
-        if (entry.isIntersecting) {
-          setActive(entry.target.id);
-        }
-      });
-    },
-    {
-      rootMargin: '-20% 0px -70% 0px',
-      threshold: 0
-    }
-  );
+  function updateActiveNav() {
+    if (isClickScrolling) return;
 
-  sections.forEach(function (section) {
-    observer.observe(section);
+    var scrollY = window.pageYOffset || document.documentElement.scrollTop;
+    var windowHeight = window.innerHeight;
+    var docHeight = document.documentElement.scrollHeight;
+
+    // 1. If at or near bottom of document, activate the last section (#webdev)
+    if (scrollY + windowHeight >= docHeight - 40) {
+      setActive(sections[sections.length - 1].id);
+      return;
+    }
+
+    // 2. If near top of document, activate the first section (#about)
+    if (scrollY < 120) {
+      setActive(sections[0].id);
+      return;
+    }
+
+    // 3. Otherwise find which section is currently active
+    var triggerPos = scrollY + (windowHeight * 0.38);
+    var activeId = sections[0].id;
+
+    for (var i = sections.length - 1; i >= 0; i--) {
+      if (triggerPos >= sections[i].offsetTop) {
+        activeId = sections[i].id;
+        break;
+      }
+    }
+
+    setActive(activeId);
+  }
+
+  // Handle nav link clicks
+  navLinks.forEach(function (anchor) {
+    anchor.addEventListener('click', function (e) {
+      var href = this.getAttribute('href');
+      var target = document.querySelector(href);
+      if (target) {
+        e.preventDefault();
+
+        var collapseEl = target.querySelector('.collapse');
+        if (collapseEl && !collapseEl.classList.contains('show')) {
+          if (typeof bootstrap !== 'undefined' && bootstrap.Collapse) {
+            var bsCollapse = bootstrap.Collapse.getOrCreateInstance(collapseEl);
+            bsCollapse.show();
+          } else {
+            collapseEl.classList.add('show');
+          }
+        }
+
+        setActive(target.id);
+        isClickScrolling = true;
+        clearTimeout(clickTimeout);
+        clickTimeout = setTimeout(function () {
+          isClickScrolling = false;
+          updateActiveNav();
+        }, 800);
+
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
   });
+
+  // Handle other anchor links outside site-nav (if any)
+  document.querySelectorAll('a[href^="#"]:not(.site-nav a)').forEach(function (anchor) {
+    anchor.addEventListener('click', function (e) {
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+
+  var ticking = false;
+  window.addEventListener('scroll', function () {
+    if (!ticking) {
+      window.requestAnimationFrame(function () {
+        updateActiveNav();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  }, { passive: true });
+
+  window.addEventListener('resize', updateActiveNav, { passive: true });
+
+  var webdevCollapse = document.getElementById('webdevCollapse');
+  if (webdevCollapse) {
+    webdevCollapse.addEventListener('shown.bs.collapse', updateActiveNav);
+    webdevCollapse.addEventListener('hidden.bs.collapse', updateActiveNav);
+  }
+
+  updateActiveNav();
 })();
 
 

@@ -37,6 +37,7 @@
         <a href="#about">About</a>
         <a href="#stack">Stack</a>
         <a href="#projects">Projects</a>
+        <a href="#webdev">Web Dev</a>
       </nav>
     </div>
 
@@ -282,51 +283,95 @@
               </div>
             </div>
 
-            <div class="col-md-6">
-              <div class="card">
-                <img src="assets/images/money_map.png" alt="Money Map project screenshot" class="project-card-img">
-                <div class="card-body p-3">
-                  <h3 class="project-title">Money Map</h3>
-                  <p class="project-description">
-                    A personal finance management application
-                    built to monitor spending habits, track
-                    expenses, and provide a clearer overview of
-                    financial activity.
-                  </p>
-                  <div class="d-flex flex-wrap gap-2">
-                    <span class="chip">HTML</span>
-                    <span class="chip">JS</span>
-                    <span class="chip">Tailwind CSS</span>
-                    <span class="chip">PHP</span>
-                    <span class="chip">SQL</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="webdev" class="mb-5">
+      <div class="card webdev-card">
+        <button class="webdev-accordion-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#webdevCollapse"
+          aria-expanded="false" aria-controls="webdevCollapse" id="webdevToggle">
+          <div class="d-flex align-items-center gap-3">
+            <h2 class="projects-section-title mb-0">Web Development Projects</h2>
+          </div>
+          <div class="webdev-chevron-circle" aria-hidden="true">
+            <i class="bi bi-chevron-down webdev-chevron"></i>
+          </div>
+        </button>
+
+        <div class="collapse" id="webdevCollapse">
+          <div class="section-card-body webdev-collapse-body">
+
+            <div class="row g-4">
+
+              <!-- Bento Grid Gallery -->
+              <div class="col-md-6">
+                <div class="card webdev-project-card h-100">
+                  <div class="project-img-wrapper">
+                    <img src="assets/images/a01-preview.png" alt="Bento Grid Gallery project screenshot"
+                      class="project-card-img">
+                    <a href="https://aeronnarvacan.github.io/webdev/A01/" target="_blank" rel="noopener noreferrer"
+                      class="project-img-overlay" aria-label="Open live Bento Grid Gallery site">
+                      <span class="overlay-badge"><i class="bi bi-box-arrow-up-right me-1"></i>Live Site</span>
+                    </a>
+                  </div>
+                  <div class="card-body p-3 d-flex flex-column">
+                    <div class="d-flex align-items-center justify-content-between mb-1">
+                      <h3 class="project-title mb-0">Bento Grid Gallery</h3>
+                      <a href="https://aeronnarvacan.github.io/webdev/A01/" target="_blank" rel="noopener noreferrer"
+                        class="project-live-btn" title="Open live site" aria-label="Open Bento Grid Gallery live site">
+                        <i class="bi bi-box-arrow-up-right"></i>
+                      </a>
+                    </div>
+                    <p class="project-description flex-grow-1">
+                      A Formula 1 and motorsport photo gallery built in an asymmetrical bento-style grid layout using
+                      responsive Bootstrap components.
+                    </p>
+                    <div class="d-flex flex-wrap gap-2">
+                      <span class="chip">HTML</span>
+                      <span class="chip">CSS</span>
+                      <span class="chip">Bootstrap</span>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
 
-            <div class="col-md-6">
-              <div class="card">
-                <img src="assets/images/travel_buddy.png" alt="Travel Buddy project screenshot"
-                  class="project-card-img">
-                <div class="card-body p-3">
-                  <h3 class="project-title">Travel Buddy</h3>
-                  <p class="project-description">
-                    A travel planning application that combines
-                    trip organization with a digital memory
-                    capsule, allowing users to preserve travel
-                    experiences through photos and trip records.
-                  </p>
-                  <div class="d-flex flex-wrap gap-2">
-                    <span class="chip">HTML</span>
-                    <span class="chip">JS</span>
-                    <span class="chip">Tailwind CSS</span>
-                    <span class="chip">PHP</span>
-                    <span class="chip">SQL</span>
+              <!-- Cyberpunk: Edgerunners -->
+              <div class="col-md-6">
+                <div class="card webdev-project-card h-100">
+                  <div class="project-img-wrapper">
+                    <img src="assets/images/a02-preview.png" alt="Cyberpunk: Edgerunners Dex project screenshot"
+                      class="project-card-img">
+                    <a href="https://aeronnarvacan.github.io/webdev/A02/" target="_blank" rel="noopener noreferrer"
+                      class="project-img-overlay" aria-label="Open live Cyberpunk: Edgerunners site">
+                      <span class="overlay-badge"><i class="bi bi-box-arrow-up-right me-1"></i>Live Site</span>
+                    </a>
+                  </div>
+                  <div class="card-body p-3 d-flex flex-column">
+                    <div class="d-flex align-items-center justify-content-between mb-1">
+                      <h3 class="project-title mb-0">Cyberpunk: Edgerunners</h3>
+                      <a href="https://aeronnarvacan.github.io/webdev/A02/" target="_blank" rel="noopener noreferrer"
+                        class="project-live-btn" title="Open live site"
+                        aria-label="Open Cyberpunk: Edgerunners live site">
+                        <i class="bi bi-box-arrow-up-right"></i>
+                      </a>
+                    </div>
+                    <p class="project-description flex-grow-1">
+                      An interactive character and megacorporation database inspired by Cyberpunk: Edgerunners,
+                      featuring retro HUD styling and accessible modal dossiers.
+                    </p>
+                    <div class="d-flex flex-wrap gap-2">
+                      <span class="chip">HTML</span>
+                      <span class="chip">CSS</span>
+                      <span class="chip">JavaScript</span>
+                      <span class="chip">Bootstrap</span>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
 
+            </div>
           </div>
         </div>
       </div>
